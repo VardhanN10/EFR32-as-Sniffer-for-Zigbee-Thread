@@ -78,25 +78,58 @@ After configuration, click **Apply EFR32 sniffer Configuration** and *Finish*.
 
 ## Verifying and Starting the Capture
 
-### 5. Start Packet Capture
+## Verifying and Starting the Capture
 
-Return to the **Debug Adapters** panel.
+### 5. Verify Sniffer Functionality with Zigbee Network
 
-- Select the same device you configured as a sniffer.
-- Click **Start Capture**
-
-![Step 5](images/sniffer_step5.png)
+Now we will verify that the sniffer is functioning correctly by using two additional EFR32 boards to form a Zigbee network and observe the data being captured.
 
 ---
 
-## Viewing Network Traffic
+#### 1. Create a Zigbee Network on the Light Node
 
-Upon starting capture, the **Network Analyzer** will launch automatically and begin capturing wireless traffic in real time.  
-You should now see incoming frames and packets visualized, indicating successful sniffer operation.
+Start by setting up a Zigbee network on one of your boards configured as a **Zigbee Light** device.  
+After the network is formed, note the **channel number** being used.
 
-![Capture Output](images/sniffer_output.png)
+![Zigbee Light Channel](images/zigbee_light_channel.png)
 
 ---
+
+#### 2. Align Sniffer to the Same Channel
+
+To ensure the sniffer listens on the same channel:
+
+- Open **Launch Console** in Simplicity Studio.
+- Navigate to **Serial 1** of the sniffer board.
+
+![Launch Console Serial 1](images/sniffer_launch_console.png)
+
+Check if the sniffer is set to the same channel. If not, you can manually set the channel using the following command:
+
+```bash
+setChannel <desired_channel_number>
+```
+Replace <desired_channel_number> with the actual channel used by the Zigbee Light.
+
+#### 3. Add the Switch Node to the Network
+Now power up the board configured as a Zigbee Switch and allow it to join the network.
+Return to the Network Analyzer and click **Start Capture**.
+
+-You will now observe traffic flow in the capture window, including nodes communicating on the Zigbee network.
+
+#### 4. Handle NWK Decryption Errors (Optional)
+You may notice a NWK Decryption Failed error when viewing traffic.
+-This occurs if the network security key is not yet known to the sniffer.
+
+-To resolve this:
+
+On the Zigbee Light device, execute the following command to print security keys:
+```
+keys print
+```
+- Copy the NWK Key from the output.
+
+- Paste it into the appropriate section of the Network Analyzer to enable proper decryption.
 
 ## Conclusion
 
