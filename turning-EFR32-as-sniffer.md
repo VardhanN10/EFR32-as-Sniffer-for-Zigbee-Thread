@@ -42,7 +42,7 @@ Right-click on the desired debug adapter and select **Sniffer Configurator**
 
 In the dialog that appears, choose the debug adapter that you want to turn into a sniffer. Click *Next*
 
-![Step 2](images/sniffer-step2.png)
+![Step 2](images/sinffer-step2.png)
 
 ---
 
