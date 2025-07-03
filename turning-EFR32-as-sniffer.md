@@ -34,7 +34,7 @@ Navigate to the **Debug Adapters** view within Simplicity Studio.
 Right-click on the desired debug adapter and select **Sniffer Configurator**
 
 
-![Step 1](images/sniffer_step1.png)
+![Step 1](images/sniffer-step1.png)
 
 ---
 
@@ -42,7 +42,7 @@ Right-click on the desired debug adapter and select **Sniffer Configurator**
 
 In the dialog that appears, choose the debug adapter that you want to turn into a sniffer. Click *Next*
 
-![Step 2](images/sniffer_step2.png)
+![Step 2](images/sniffer-step2.png)
 
 ---
 
@@ -55,7 +55,7 @@ If this is your first time turning the board into a sniffer:
 - Then click *Next*
 
 
-![Step 3](images/sniffer_step3.png)
+![Step 3](images/sniffer-step3.png)
 
 ---
 
@@ -72,7 +72,7 @@ In the parameter configuration window:
 After configuration, click **Apply EFR32 sniffer Configuration** and *Finish*.
 
 
-![Step 4](images/sniffer_step4.png)
+![Step 4](images/sniffer-step4.png)
 
 ---
 
