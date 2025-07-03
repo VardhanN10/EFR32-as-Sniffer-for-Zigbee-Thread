@@ -91,7 +91,7 @@ Now we will verify that the sniffer is functioning correctly by using two additi
 Start by setting up a Zigbee network on one of your boards configured as a **Zigbee Light** device.  
 After the network is formed, note the **channel number** being used.
 
-![Zigbee Light Channel](images/zigbee_light_channel.png)
+![Step 5](images/sniffer-step5.png)
 
 ---
 
@@ -102,7 +102,7 @@ To ensure the sniffer listens on the same channel:
 - Open **Launch Console** in Simplicity Studio.
 - Navigate to **Serial 1** of the sniffer board.
 
-![Launch Console Serial 1](images/sniffer_launch_console.png)
+![Launch Console Serial 1](images/sniffer-step6.png)
 
 Check if the sniffer is set to the same channel. If not, you can manually set the channel using the following command:
 
