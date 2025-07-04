@@ -121,6 +121,7 @@ Return to the Network Analyzer and click **Start Capture**.
 You may notice a NWK Decryption Failed error when viewing traffic.
 -This occurs if the network security key is not yet known to the sniffer.
 
+ ![Network Analyzer Data](images/sniffer-step7.png)
 -To resolve this:
 
 On the Zigbee Light device, execute the following command to print security keys:
@@ -129,10 +130,10 @@ keys print
 ```
 - Copy the NWK Key from the output.
 
-  ![Newtwork Key](images/sniffer-step7.png)
+  ![Newtwork Key](images/sniffer-step8.png)
 
 - Paste it into the appropriate section of the Network Analyzer to enable proper decryption.
-![Adding NWK Key](images/sniffer-step8.png)
+![Adding NWK Key](images/sniffer-step9.png)
 
 ## Conclusion
 
