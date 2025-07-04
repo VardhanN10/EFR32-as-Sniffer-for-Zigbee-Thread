@@ -129,7 +129,10 @@ keys print
 ```
 - Copy the NWK Key from the output.
 
+  ![Newtwork Key](images/sniffer-step7.png)
+
 - Paste it into the appropriate section of the Network Analyzer to enable proper decryption.
+![Adding NWK Key](images/sniffer-step8.png)
 
 ## Conclusion
 
